@@ -12,5 +12,6 @@ task :default do |t|
   %x{xcodebuild}
   FileUtils.rm_rf("/Applications/#{APPNAME}.app") if File.exists?("/Applications/#{APPNAME}.app")
   FileUtils.mv "build/Release/#{APPNAME}.app", "/Applications/#{APPNAME}.app"
+  %x{open /Applications/#{APPNAME}.app}
   %x{git checkout URLHandlerCommand.m}
 end
