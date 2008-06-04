@@ -1,0 +1,12 @@
+
+{  
+    Name = "URLHandler commands";
+    Description = "Open apple terminals with the contents of an http fed applescript";
+    
+    Commands = {
+        "GetURL" = {
+            "Name" = "get URL";
+            "Description" = "Open a URL";
+        };
+    };    
+}

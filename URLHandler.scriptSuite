@@ -1,0 +1,12 @@
+{
+    Name = URLHandler;
+    AppleEventCode = "UrHD";
+
+    Commands = {
+        "GetURL" = {
+            CommandClass = URLHandlerCommand;
+            AppleEventCode = GURL;
+            AppleEventClassCode = GURL;
+         };
+    };
+}

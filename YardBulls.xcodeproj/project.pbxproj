@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74105DD00DF6462600EA659F /* URLHandler.scriptTerminology in Resources */ = {isa = PBXBuildFile; fileRef = 74105DCC0DF6462600EA659F /* URLHandler.scriptTerminology */; };
+		74105DD10DF6462600EA659F /* URLHandler.scriptSuite in Resources */ = {isa = PBXBuildFile; fileRef = 74105DCD0DF6462600EA659F /* URLHandler.scriptSuite */; };
+		74105DD20DF6462600EA659F /* URLHandlerCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 74105DCE0DF6462600EA659F /* URLHandlerCommand.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -22,6 +25,10 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* YardBulls_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YardBulls_Prefix.pch; sourceTree = "<group>"; };
+		74105DCC0DF6462600EA659F /* URLHandler.scriptTerminology */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.scriptTerminology; path = URLHandler.scriptTerminology; sourceTree = SOURCE_ROOT; };
+		74105DCD0DF6462600EA659F /* URLHandler.scriptSuite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.scriptSuite; path = URLHandler.scriptSuite; sourceTree = SOURCE_ROOT; };
+		74105DCE0DF6462600EA659F /* URLHandlerCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLHandlerCommand.m; sourceTree = SOURCE_ROOT; };
+		74105DCF0DF6462600EA659F /* URLHandlerCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLHandlerCommand.h; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* YardBulls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YardBulls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +81,10 @@
 		29B97314FDCFA39411CA2CEA /* YardBulls */ = {
 			isa = PBXGroup;
 			children = (
+				74105DCC0DF6462600EA659F /* URLHandler.scriptTerminology */,
+				74105DCD0DF6462600EA659F /* URLHandler.scriptSuite */,
+				74105DCE0DF6462600EA659F /* URLHandlerCommand.m */,
+				74105DCF0DF6462600EA659F /* URLHandlerCommand.h */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -156,6 +167,8 @@
 			files = (
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				74105DD00DF6462600EA659F /* URLHandler.scriptTerminology in Resources */,
+				74105DD10DF6462600EA659F /* URLHandler.scriptSuite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				74105DD20DF6462600EA659F /* URLHandlerCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,9 @@
 		activeBuildConfigurationName = Release;
 		activeExecutable = 74105DBC0DF6455C00EA659F /* YardBulls */;
 		activeTarget = 8D1107260486CEB800E47090 /* YardBulls */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* YardBulls */,
+		);
 		codeSenseManager = 74105DC30DF6456000EA659F /* Code sense */;
 		executables = (
 			74105DBC0DF6455C00EA659F /* YardBulls */,
@@ -46,12 +49,13 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
