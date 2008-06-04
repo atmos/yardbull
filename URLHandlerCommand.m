@@ -23,6 +23,7 @@
   [task setArguments: arguments];
   [task launch];
 
+  exit(0);
   return nil;
 }
 
