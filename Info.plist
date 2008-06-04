@@ -7,9 +7,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>YardBulls</string>
+	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.YardBulls</string>
+	<string>com.engineyard.YardBulls</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

@@ -7,12 +7,12 @@
   NSTask *task;
 
   NSString *urlString = [self directParameter];
-	NSArray *values = [urlString componentsSeparatedByString :@"/"];
+  NSArray *values = [urlString componentsSeparatedByString :@"/"];
   NSLog(@"url = %@", urlString);
 
   NSLog(@"url = %@", values);
-	NSLog(@"cluster = %@", [values objectAtIndex:2]);
-	NSLog(@"environment = %@", [values objectAtIndex:3]);
+  NSLog(@"cluster = %@", [values objectAtIndex:2]);
+  NSLog(@"environment = %@", [values objectAtIndex:3]);
   
   NSArray *arguments;
   arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], nil];
@@ -23,7 +23,7 @@
   [task setArguments: arguments];
   [task launch];
 
-  exit(0);
+  // exit(0);
   return nil;
 }
 
