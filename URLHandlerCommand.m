@@ -19,7 +19,7 @@
   NSLog(@"args = %@", arguments);
 
   task = [[NSTask alloc] init];
-  [task setLaunchPath: @"/opt/local/bin/samurai"];
+  [task setLaunchPath: @"SAMURAI_PATH"];
   [task setArguments: arguments];
   [task launch];
 
