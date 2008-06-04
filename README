@@ -1,0 +1,8 @@
+This a simple custom URL handler written in Cocoa.  It's surprisingly little
+code for what it does.  It parses the url that's provided and calls an
+internal tool that's a shell command.  With this we can login to environments
+automagically. :)
+
+To install simply do the following:
+% xcodebuild
+% sudo cp -r build/Release/YardBulls.app /Applications
