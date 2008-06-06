@@ -36,7 +36,6 @@
   }
 
   [task launch];
-  exit(0);
   return nil;
 }
 
