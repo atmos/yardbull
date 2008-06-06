@@ -10,17 +10,27 @@
   NSArray *values = [urlString componentsSeparatedByString :@"/"];
   NSLog(@"url = %@", urlString);
 
-  NSLog(@"url = %@", values);
+  NSLog(@"values = %@", values);
   NSLog(@"cluster = %@", [values objectAtIndex:2]);
   NSLog(@"environment = %@", [values objectAtIndex:3]);
-  
+	NSLog(@"debug = %@", [values objectAtIndex:4]);
+
   NSArray *arguments;
-  arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], nil];
+  arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], [values objectAtIndex:4], nil];
   NSLog(@"args = %@", arguments);
 
   task = [[NSTask alloc] init];
   [task setLaunchPath: @"SAMURAI_PATH"];
   [task setArguments: arguments];
+
+  NSDictionary *dictionary = [ task environment ];
+
+  for (id key in dictionary)
+  {
+    NSLog(@"key: %@, value: %@", key, [dictionary objectForKey:key]);
+  }
+
+
   [task launch];
 
   exit(0);
