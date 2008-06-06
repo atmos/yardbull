@@ -7,16 +7,21 @@
   NSTask *task;
 
   NSString *urlString = [self directParameter];
-  NSArray *values = [urlString componentsSeparatedByString :@"/"];
   NSLog(@"url = %@", urlString);
+  NSArray *arguments;
+
+  NSArray *values = [urlString componentsSeparatedByString :@"/"];
 
   NSLog(@"values = %@", values);
   NSLog(@"cluster = %@", [values objectAtIndex:2]);
   NSLog(@"environment = %@", [values objectAtIndex:3]);
-	NSLog(@"debug = %@", [values objectAtIndex:4]);
-
-  NSArray *arguments;
-  arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], [values objectAtIndex:4], nil];
+  @try {
+    NSLog(@"debug = %@", [values objectAtIndex:4]);
+    arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], [values objectAtIndex:4], nil];
+  }
+  @catch (NSException *e) {
+    arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], nil];
+  }
   NSLog(@"args = %@", arguments);
 
   task = [[NSTask alloc] init];
@@ -30,9 +35,7 @@
     NSLog(@"key: %@, value: %@", key, [dictionary objectForKey:key]);
   }
 
-
   [task launch];
-
   exit(0);
   return nil;
 }
