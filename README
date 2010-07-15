@@ -7,8 +7,8 @@ To install simply do the following:
 % rake
 % Checkout the "Log Me In" link on an enivornments page in ninja
 
-This really only parses urls that are formed like "eyenv://ey01/187"  It grabs
-those two parameters and calls samurai terminal -C ey01 -E 187.  Hopefully
+This really only parses urls that are formed like "appcloud://compton"  It
+grabs the environment name, compton, and shells out to ey terminal.  Hopefully
 it'll save you some typing.
 
 I'd like to redo this to run any applescript returned from a remote host but I'm

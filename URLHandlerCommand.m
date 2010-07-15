@@ -19,7 +19,7 @@
   NSLog(@"args = %@", arguments);
 
   task = [[NSTask alloc] init];
-  [task setLaunchPath: @"ey"];
+  [task setLaunchPath: @"ENGINEYARD_GEM_PATH"];
   [task setArguments: arguments];
 
   NSDictionary *dictionary = [ task environment ];

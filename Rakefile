@@ -1,14 +1,13 @@
 require 'rake'
 require 'fileutils'
 
-
 APPNAME='YardBulls'
 
 task :default do |t|
-  samurai = %x{which samurai}.chomp
-  raise ArgumentError, "samurai couldn't be found in your path" if samurai.nil? or samurai.empty?
+  ey_gem_path = %x{which ey}.chomp
+  raise ArgumentError, "the ey gem couldn't be found in your path" if ey_gem_path.nil? or ey_gem_path.empty?
   %x{git checkout URLHandlerCommand.m}
-  %x{perl -p -i -e 's\#SAMURAI_PATH\##{samurai}\#g' URLHandlerCommand.m}
+  %x{perl -p -i -e 's\#ENGINEYARD_GEM_PATH\##{ey_gem_path}\#g' URLHandlerCommand.m}
   %x{xcodebuild}
   FileUtils.rm_rf("/Applications/#{APPNAME}.app") if File.exists?("/Applications/#{APPNAME}.app")
   FileUtils.mv "build/Release/#{APPNAME}.app", "/Applications/#{APPNAME}.app"
