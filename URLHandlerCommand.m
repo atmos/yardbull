@@ -13,19 +13,13 @@
   NSArray *values = [urlString componentsSeparatedByString :@"/"];
 
   NSLog(@"values = %@", values);
-  NSLog(@"cluster = %@", [values objectAtIndex:2]);
-  NSLog(@"environment = %@", [values objectAtIndex:3]);
-  @try {
-    NSLog(@"debug = %@", [values objectAtIndex:4]);
-    arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], [values objectAtIndex:4], nil];
-  }
-  @catch (NSException *e) {
-    arguments = [NSArray arrayWithObjects: @"terminal", @"-C", [values objectAtIndex:2], @"-E", [values objectAtIndex:3], nil];
-  }
+  NSLog(@"environment = %@", [values objectAtIndex:2]);
+  arguments = [NSArray arrayWithObjects: @"terminal", @"-e", [values objectAtIndex:2], nil];
+
   NSLog(@"args = %@", arguments);
 
   task = [[NSTask alloc] init];
-  [task setLaunchPath: @"SAMURAI_PATH"];
+  [task setLaunchPath: @"ey"];
   [task setArguments: arguments];
 
   NSDictionary *dictionary = [ task environment ];
@@ -36,6 +30,7 @@
   }
 
   [task launch];
+  exit(0);
   return nil;
 }
 
